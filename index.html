@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>AI LAB</title>
+<style>
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#F4F7FA;color:#0B2A3F}
+  .top{background:#0B2A3F;color:#fff;padding:16px 20px;font-weight:bold;letter-spacing:.08em;font-size:13px}
+  .wrap{padding:24px 20px}
+  .code{font-size:56px;font-weight:900;line-height:1}
+  .msg{color:#7F8C97;margin-top:12px}
+  a.btn{display:block;text-align:center;background:#1F5F82;color:#fff;text-decoration:none;padding:14px;border-radius:10px;margin-top:22px;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="top">AI LAB &middot; LIMITLESS</div>
+<div class="wrap">
+  <div class="code" id="code"></div>
+  <p class="msg" id="msg">Apertura inventario&hellip;</p>
+  <a class="btn" id="btn" href="#" style="display:none">Apri inventario</a>
+</div>
+<script>
+(async () => {
+  const codice = (new URLSearchParams(location.search).get('c') || '').trim().toUpperCase();
+  document.getElementById('code').textContent = codice || '?';
+  const cfg = await fetch('codes.json', {cache: 'no-store'}).then(r => r.json());
+  const riga = cfg.codici[codice];
+  const btn = document.getElementById('btn');
+  if (riga) {
+    const url = cfg.destinazione.replaceAll('{riga}', riga);
+    btn.href = url; btn.style.display = 'block';
+    location.replace(url);
+  } else {
+    document.getElementById('msg').textContent = 'Codice non registrato.';
+    btn.href = cfg.foglio; btn.style.display = 'block';
+  }
+})();
+</script>
+</body>
+</html>
