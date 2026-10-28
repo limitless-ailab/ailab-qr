@@ -1,1 +1,22 @@
-{"foglio":"https://docs.google.com/spreadsheets/d/1wUdquoAtfh07Uv1Wu3NcaXc89Ogl1M4HfHi4JEUGDEE/edit#gid=12","destinazione":"https://docs.google.com/spreadsheets/d/1wUdquoAtfh07Uv1Wu3NcaXc89Ogl1M4HfHi4JEUGDEE/edit#gid=12&range=A{riga}:J{riga}","codici":{"S01":4,"S02":5,"S03":6,"S04":7,"S05":8}}
+{
+  "foglio": "https://docs.google.com/spreadsheets/d/1wUdquoAtfh07Uv1Wu3NcaXc89Ogl1M4HfHi4JEUGDEE/edit#gid=12",
+  "destinazione": "https://docs.google.com/spreadsheets/d/1wUdquoAtfh07Uv1Wu3NcaXc89Ogl1M4HfHi4JEUGDEE/edit#gid=12&range=A{riga}:J{riga}",
+  "codici": {
+    "S01": 4,
+    "S02": 5,
+    "S03": 6,
+    "S04": 7,
+    "S05": 8,
+    "B01": 9,
+    "B02": 10,
+    "B03": 11,
+    "B04": 12,
+    "B05": 13,
+    "B06": 14,
+    "B07": 15,
+    "B08": 16,
+    "O01": 17,
+    "M01": 18,
+    "B09": 19
+  }
+}
